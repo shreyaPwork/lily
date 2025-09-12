@@ -126,13 +126,15 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #cfd8df;
-  display: flex;
-  justify-content: center;
-  padding: 40px;
 }
 
+
 .navbar {
-  width: 100%;
+  position: absolute;
+  top: 20px;    
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;    
   max-width: 1400px;
   background: #fff;
   border-radius: 50px;
@@ -141,7 +143,9 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10; 
 }
+
 .logo {
 font-family: 'Georgia', serif;
 font-size: 32px;
@@ -250,3 +254,10 @@ stroke-width: 2;
     width: 24px;
     height: 24px;
 }
+.hero {
+  height: 100vh;  /* full screen height */
+  width: 100%;
+  position: relative;
+  background: #cfd8df; /* fallback, replace with your hero image */
+}
+
