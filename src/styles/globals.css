@@ -120,3 +120,133 @@
 .product-card:hover {
   @apply border-primary/20 shadow-primary/5;
 }
+
+/* User provided navbar CSS */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #cfd8df;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1400px;
+  background: #fff;
+  border-radius: 50px;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.logo {
+font-family: 'Georgia', serif;
+font-size: 32px;
+font-weight: bold;
+}
+.logo span {
+font-family: 'Brush Script MT', cursive;
+font-weight: normal;
+font-size: 40px;
+}
+.nav-links {
+display: flex;
+gap: 40px;
+}
+.nav-links a {
+text-decoration: none;
+color: #000;
+font-weight: bold;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+.search {
+display: flex;
+align-items: center;
+background: #000;
+color: #fff;
+padding: 8px 15px;
+border-radius: 30px;
+gap: 8px;
+font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+transition: width 0.3s ease;
+overflow: hidden;
+width: 120px;
+}
+.search input {
+background: transparent;
+border: none;
+outline: none;
+color: #fff;
+font-size: 12px;
+width: 80%;
+transition: width 0.3s ease;
+}
+.search svg {
+width: 16px;
+height: 16px;
+fill: #fff;
+flex-shrink: 0;
+}
+.search:focus-within {
+width: 200px;
+}
+.search:focus-within input {
+width: 100%;
+}
+.icons {
+display: flex;
+align-items: center;
+gap: 25px;
+margin-left: 25px;
+}
+.icons svg {
+width: 20px;
+height: 20px;
+fill: #000;
+cursor: pointer;
+}
+/* responsive */
+.burger {
+display: none;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+.burger svg {
+width: 26px;
+height: 26px;
+stroke: #000;
+stroke-width: 2;
+}
+/* … your other CSS, including the mobile-menu fix … */
+.mobile-menu {
+  display: none; /* hidden everywhere by default */
+}
+
+@media (max-width: 900px) {
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    display: none;
+  }
+  .mobile-menu.active {
+    display: flex;
+  }
+}
+
+.shoping_cart{
+    width: 24px;
+    height: 24px;
+}
